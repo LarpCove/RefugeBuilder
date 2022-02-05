@@ -1,0 +1,19 @@
+{
+    "omnisharp.enableEditorConfigSupport": true,
+    "omnisharp.enableRoslynAnalyzers": true,
+    "git.enableCommitSigning": true,
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+        120,
+        140
+    ],
+    "cSpell.words": [
+        "cobertura",
+        "codecov",
+        "cref",
+        "larp",
+        "Omni",
+        "signoff",
+        "xunit"
+    ]
+}
