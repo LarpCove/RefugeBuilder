@@ -1,0 +1,10 @@
+<h2>General:</h2>
+<ul>
+    {% for page in site.html_pages %}
+    <li>
+        <h3>
+            <a href="{{ site.baseurl}}{{ page.url }}">{{page.title}}</a>
+        </h3>
+    </li>
+    {% endfor %}
+</ul>

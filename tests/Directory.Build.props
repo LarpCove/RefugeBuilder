@@ -1,0 +1,31 @@
+<Project>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+    <RootNamespace>RefugeBuilder.$(MSBuildProjectName)</RootNamespace>
+    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)..\artifacts\obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+    <OutputPath>$(MSBuildThisFileDirectory)..\artifacts\bin\$(MSBuildProjectName)\$(Configuration)\</OutputPath>
+    <DocumentationFile>$(MSBuildThisFileDirectory)..\artifacts\bin\$(MSBuildProjectName)\$(Configuration)\$(TargetFramework)\$(MSBuildProjectName).xml</DocumentationFile>
+    <RunSettingsFilePath>$(MSBuildThisFileDirectory)TestSettings.runsettings</RunSettingsFilePath>
+    <IsTestProject>true</IsTestProject>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="CreateAndFake" Version="1.9.13" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3" PrivateAssets="All" />
+    <PackageReference Include="coverlet.collector" Version="3.1.1" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.CodeAnalysis" Version="4.0.1" PrivateAssets="All" />
+  </ItemGroup>
+  <ItemGroup>
+    <AssemblyAttribute Include="CLSCompliantAttribute">
+      <_Parameter1>true</_Parameter1>
+    </AssemblyAttribute>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>FakerTypes</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+</Project>
